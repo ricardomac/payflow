@@ -20,10 +20,12 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
   @override
   void initState() {
     barcodeScannerController.getAvailableCameras();
-    barcodeScannerController.statusNotifier.addListener(() {});
-    if (barcodeScannerController.status.hasBarCode) {
-      Navigator.pushReplacementNamed(context, "/insert_boleto");
-    }
+    barcodeScannerController.statusNotifier.addListener(() {
+      if (barcodeScannerController.status.hasBarCode) {
+        Navigator.pushReplacementNamed(context, "/insert_boleto");
+      }
+    });
+
     super.initState();
   }
 
@@ -47,7 +49,8 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
             builder: (_, status, __) {
               if (status.showCamera) {
                 return Container(
-                  child: barcodeScannerController.cameraController!.buildPreview(),
+                  child:
+                      barcodeScannerController.cameraController!.buildPreview(),
                 );
               } else {
                 return Container();
