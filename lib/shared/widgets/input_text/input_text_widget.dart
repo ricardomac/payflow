@@ -29,6 +29,7 @@ class InputTextWidget extends StatelessWidget {
           TextFormField(
             initialValue: initialValue,
             validator: validator,
+            controller: controller,
             onChanged: onChanged,
             style: AppTextStyles.input,
             decoration: InputDecoration(
