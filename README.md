@@ -1,7 +1,6 @@
-<h1 align="center">
-    <a href="https://flutter.dev/">🔗 Flutter</a>
-    
-</h1>
+<p align="center"><img width="180px" src="https://github.com/rocketseat-education/nlw-06-flutter/raw/main/.github/payflow-logo.png"></p>
+## 
+![alt](https://img.shields.io/badge/flutter-2.2.3-blue)
 
 # Sobre o PayFlow
 <p>
